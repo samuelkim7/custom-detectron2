@@ -1,3 +1,4 @@
 export CUDA_VISIBLE_DEVICES=0
+export PYTHONPATH=${PWD}
 
-python train.py --config ${PWD}/configs/training.yaml
+python main/train.py --config configs/training.yaml

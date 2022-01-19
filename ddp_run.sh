@@ -1,3 +1,5 @@
-python train.py \
+export PYTHONPATH=${PWD}
+
+python main/train.py \
 	--num-gpus 4 \
-	--config ${PWD}/configs/training.yaml
+	--config configs/training.yaml
