@@ -1,19 +1,25 @@
 # custom-detectron2
 - Customize your training pipepline for detectron2 in a simple manner.
-- You can add custom trainer, evaluator, and evaluation metrics in the factory folder
-- You can add data augmentations inside your trainer implementation
-- Change crucial training configurations in the configs/training.yaml
+
+## Features
+- You can add custom trainer, evaluator, and evaluation metrics (in factory).
+- You can add data augmentations inside your trainer implementation.
+- See how to use BestCheckpointer and PeriodicWriter for detectron2 (in factory/trainer.py).
+- Change the crucial training configurations easily (in configs/training.yaml).
+- Sample implementations are all shown in the package.
 
 ## Setup
-- Install detectron2 in a conda environment (don't do pip install detectron2)
+- Create a conda environment and install pytorch
+- Install detectron2 in a conda environment
 ```
+# don't do pip install detectron2
 pip install 'git+https://github.com/facebookresearch/detectron2.git'
 ```
 - If there is a cuda version issue in installation, try pre-built detectron2 for linux at  
 https://detectron2.readthedocs.io/en/latest/tutorials/install.html 
 
 ## Run the training pipeline
-- run the python script
+- single gpu training
 ```
 bash run.sh
 ```
