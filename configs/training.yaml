@@ -1,0 +1,22 @@
+MODEL:
+  NAME: mask_rcnn_R_50_FPN_3x_train090
+  FINE_TUNING:
+  CONFIG: COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x.yaml 
+  ROI_HEADS:
+    BATCH_SIZE_PER_IMAGE: 512
+    NUM_CLASSES: 3
+    SCORE_THRESH_TEST: 0.5
+DATASET:
+  DATA_DIR: /home/samuelkim/.kaggle/data/sartorius
+  TRAIN_SET: sartorius_train
+  VAL_SET: sartorius_val
+  TEST_SET:
+  MASK_FORMAT: bitmask
+TRAINING:
+  BATCH_SIZE: 2
+  NUM_WORKERS: 12
+  LR: 0.001
+  LR_SCHEDULER: # WarmupCosineLR
+EVAL_PERIOD: 
+CHECKPOINT_PERIOD:
+OUTPUT_DIR: /home/samuelkim/workspace/custom_detectron2/outputs
